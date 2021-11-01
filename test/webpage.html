@@ -4,21 +4,24 @@
     <body>
         <center>
             <h3>CPUBench</h3>
-        </br>
-        <INPUT type="button" value="Ë®àÊ∏¨ÈñãÂßã" onClick="cpubench()">
-        <script type="text/javascript">
-        function cpubench(){
-            start=(new Date()).getTime();
-            n=0;
-            for(i=0;i<1000;i++){
-                for(j=0;j<1000;j++){
-                    n=(n+i)/j;
+            <h4>Ç†Ç»ÇΩÇÃCPUÉXÉsÅ[ÉhÇë™íËÇµÇ‹Ç∑ÅB</h4>
+            </br>
+            <INPUT type="button" value="Start" onClick="cpubench()">
+            <script type="text/javascript">
+            function cpubench(){
+                start=(new Date()).getTime();
+                n=0;
+                for(i=0;i<10000;i++){
+                    for(j=0;j<10000;j++){
+                        n=(n+i)/j;
+                    }
                 }
+                end=(new Date()).getTime();
+                time=(end-start);
+                score=Math.round(100*Math.exp(-time/10000));
+                alert("Score "+score+"");
             }
-            end=(new Date()).getTime();
-            time=(end-start);
-            alert("„Çπ„Ç≥„Ç¢ "+time+"");
-        }
-        </script>
+            </script>
+        </center>
     </body>
 </html>
