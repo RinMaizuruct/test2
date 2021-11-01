@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+    <html>
+        <head></head>
+    <body>
+        <center>
+            <h3>CPUBench</h3>
+        </br>
+        <INPUT type="button" value="計測開始" onClick="cpubench()">
+        <script type="text/javascript">
+        function cpubench(){
+            start=(new Date()).getTime();
+            n=0;
+            for(i=0;i<1000;i++){
+                for(j=0;j<1000;j++){
+                    n=(n+i)/j;
+                }
+            }
+            end=(new Date()).getTime();
+            time=(end-start);
+            alert("スコア "+time+"");
+        }
+        </script>
+    </body>
+</html>
